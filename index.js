@@ -28,8 +28,6 @@ const myfunc = () => {
       console.log(data);
       image.setAttribute("src", data.url);
       caption.textContent = data.title;
-      caption = data.title;
-      console.log("the cpation is " + caption);
     })
     .catch((err) => {
       console.log(err);
