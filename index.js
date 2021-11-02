@@ -3,7 +3,7 @@
 const button = document.getElementById("btn");
 const image = document.getElementById("img");
 const error = document.getElementById("error");
-const caption = document.getElementById("caption");
+let caption = document.getElementById("caption");
 
 const myfunc = () => {
   let subReddit = "/" + document.getElementById("subRedditName").value;
@@ -28,6 +28,8 @@ const myfunc = () => {
       console.log(data);
       image.setAttribute("src", data.url);
       caption.textContent = data.title;
+      caption = data.title;
+      console.log("the cpation is " + caption);
     })
     .catch((err) => {
       console.log(err);
