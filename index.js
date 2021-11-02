@@ -3,6 +3,7 @@
 const button = document.getElementById("btn");
 const image = document.getElementById("img");
 const error = document.getElementById("error");
+const caption = document.getElementById("caption");
 
 const myfunc = () => {
   let subReddit = "/" + document.getElementById("subRedditName").value;
@@ -25,6 +26,7 @@ const myfunc = () => {
     .then((data) => {
       console.log(data);
       image.setAttribute("src", data.url);
+      caption.textContent = data.title;
     })
     .catch((err) => {
       console.log(err);
