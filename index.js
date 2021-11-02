@@ -19,6 +19,7 @@ const myfunc = () => {
         return res.json();
       } else {
         error.hidden = false;
+        caption.textContent = "";
         image.hidden = true;
         error.innerHTML = "There's no such subreddit";
       }
